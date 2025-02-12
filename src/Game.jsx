@@ -96,7 +96,7 @@ const Game = () => {
 
   return (
     <div className="game-container">
-      <h1 className="game-title">El Granjero, el Lobo, la Cabra y la Col</h1>
+      <h1 className="game-title">La Encrucijada del Granjero</h1>
       <h3>Hecho por: Sebastian Salgado</h3>
       <div className="banks">
         <div className="bank">
