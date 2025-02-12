@@ -1,0 +1,160 @@
+/* src/styles.css */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.App {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.game-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin-top: 20px;
+}
+
+.banks {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+  gap: 20px;
+}
+
+.bank {
+  width: 45%;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.bank:hover {
+  transform: translateY(-5px);
+}
+
+.bank h2 {
+  color: #4fd1c5;
+  margin-bottom: 20px;
+}
+
+.actor {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.1em;
+}
+
+.actor i {
+  font-size: 1.5em;
+}
+
+.controls {
+  margin: 30px 0;
+}
+
+.controls h3 {
+  color: #4fd1c5;
+  margin-bottom: 20px;
+}
+
+.controls button {
+  background: #4fd1c5;
+  color: #1a1a2e;
+  border: none;
+  padding: 12px 24px;
+  margin: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.controls button:hover {
+  background: #38b2ac;
+  transform: translateY(-2px);
+}
+
+.controls button:disabled {
+  background: #718096;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.message {
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.message p {
+  margin: 0;
+  color: #4fd1c5;
+  font-size: 1.1em;
+}
+
+.reset button {
+  background: #fc8181;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.reset button:hover {
+  background: #f56565;
+  transform: translateY(-2px);
+}
+
+.game-title {
+  color: #4fd1c5;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.river {
+  height: 100px;
+  background: linear-gradient(90deg, #4fd1c5 0%, #38b2ac 100%);
+  margin: 20px 0;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.river::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM77.38 0C85.239 2.966 90.502 4 100 4V2c-6.842 0-11.386-.542-16.396-2h-6.225zM0 14c8.44 0 13.718-1.21 22.272-4.402l1.768-.661C33.64 5.347 39.647 4 50 4c10.271 0 15.362 1.222 24.629 4.928C84.112 12.722 89.438 14 100 14v-2c-10.271 0-15.362-1.222-24.629-4.928C65.888 3.278 60.562 2 50 2 39.374 2 33.145 3.397 23.34 7.063l-1.767.662C13.223 10.84 8.163 12 0 12v2z' fill='%2338b2ac' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E") repeat;
+  animation: flow 20s linear infinite;
+}
+
+@keyframes flow {
+  from { background-position: 0 0; }
+  to { background-position: 100% 0; }
+}
